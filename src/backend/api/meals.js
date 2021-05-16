@@ -4,34 +4,15 @@ const knex = require("../database");
 
 router.get("/", async (request, response) => {
   try {
-    // knex syntax for selecting things. Look up the documentation for knex for further info
-    //const titles = await knex("meal_application").select("title");
-    //response.json(titles);
-    await knex("meals").insert({
-      id: "12",
-      title: "Egg fried rice",
-      discription: "Egg with rice and some chicken",
-      location: "Glostrup",
-      when_: new Date(),
-      max_reservations: 10,
-      price: 250,
-      created_date: new Date(),
-    });
-  } catch (error) {
-    throw error;
-  }
-});
-router.get("/", async (request, response) => {
-  try {
     if ("maxPrice" in request.query) {
-      const maxPrice = request.query.maxPrice;
+      const maxPrice = Number(request.query.maxPrice);
       const mealPrice = await knex("meals").where("price", "<=", maxPrice);
       response.send(mealPrice);
       return;
     }
 
     if ("createdAfter" in request.query) {
-      const createdAfter = request.query.createdAfter;
+      const createdAfter = Date.parse(request.query.createdAfter);
       const mealDate = await knex("meals").where(
         "created_date",
         ">=",
