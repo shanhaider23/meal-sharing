@@ -49,7 +49,7 @@ router.get("/", async (request, response) => {
     }
 
     if ("limit" in request.query) {
-      const limit = request.query.limit;
+      const limit = Number(request.query.limit);
       const getNumber = await knex("meals").limit(limit);
       response.send(getNumber);
       return;
@@ -64,7 +64,7 @@ router.get("/", async (request, response) => {
 });
 router.get("/:id", async (request, response) => {
   try {
-    const iD = request.params.id;
+    const iD = Number(request.params.id);
     const selectedMeal = await knex("meals").where("id", iD);
     response.send(selectedMeal[0]);
   } catch (error) {
@@ -83,7 +83,7 @@ router.post("/", async (request, response) => {
 
 router.put("/:id", async (request, response) => {
   try {
-    const selectedId = request.params.id;
+    const selectedId = Number(request.params.id);
     const Selectedmeal = await knex("meals").where("id", selectedId).update(request.body)
     response.json(Selectedmeal);
   } catch (error) {
@@ -93,7 +93,7 @@ router.put("/:id", async (request, response) => {
 
 router.delete("/:id", async (request, response) => {
   try {
-    const deletedID = request.params.id;
+    const deletedID = Number(request.params.id);
     const selectedmeal = await knex("meals").where("id", deletedID).del();
     response.json(selectedmeal);
   } catch (error) {

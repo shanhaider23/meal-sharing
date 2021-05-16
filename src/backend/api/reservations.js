@@ -13,7 +13,7 @@ router.get("/", async (request, response) => {
 
 router.get("/:id", async (request, response) => {
   try {
-    const Id = request.params.id;
+    const Id = parseInt(request.params.id);
     const selectedMeal = await knex("reservations").where("id", Id);
     response.send(selectedMeal[0]);
   } catch (error) {
