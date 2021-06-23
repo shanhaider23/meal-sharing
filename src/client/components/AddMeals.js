@@ -23,7 +23,7 @@ function AddMeals() {
     };
 
     // console.warn(data);
-    fetch("http://localhost:5000/api/meals", {
+    fetch("api/meals", {
       method: "POST",
       headers: {
         Accept: "application/json",

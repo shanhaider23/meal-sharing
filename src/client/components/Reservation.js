@@ -5,7 +5,7 @@ function Reservation() {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/api/reservations")
+    fetch("/api/reservations")
       .then((response) => response.json())
       .then((data) => setReservations(data));
     setIsLoading(false);

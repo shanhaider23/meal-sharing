@@ -6,7 +6,7 @@ function MealDetail() {
   const [filterMeal, setFilterMeal] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/meals")
+    fetch("/api/meals")
       .then((response) => response.json())
       .then((result) => {
         const newMeals = result.find((meal) => meal.id === parseInt(id));

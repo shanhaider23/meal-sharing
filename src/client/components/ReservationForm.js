@@ -20,7 +20,7 @@ function ReservationForm() {
       name,
     };
     // console.warn(data);
-    fetch("http://localhost:5000/api/reservations", {
+    fetch("/api/reservations", {
       method: "POST",
       headers: {
         Accept: "application/json",
