@@ -5,7 +5,7 @@ function MealDiaplay() {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/api/meals")
+    fetch("/api/meals")
       .then((response) => response.json())
       .then((data) => setMeal(data));
     setIsLoading(false);
