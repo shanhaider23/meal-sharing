@@ -1,5 +1,5 @@
 import React from "react";
-
+import WeatherFetch from "./WeatherFetch";
 function Home() {
   return (
     <div>

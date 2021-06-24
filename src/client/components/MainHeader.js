@@ -58,7 +58,7 @@ const MainHeader = () => {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/Addmeals"
+                to="/AddMeals"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
@@ -74,7 +74,7 @@ const MainHeader = () => {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Contact Us
+                Contact
               </NavLink>
             </li>
           </ul>
