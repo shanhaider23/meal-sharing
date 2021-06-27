@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useFetch } from "./useMeals";
 import { NavLink } from "react-router-dom";
 function Reservation() {
-  const [reservations, setReservations] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    fetch("/api/reservations")
-      .then((response) => response.json())
-      .then((data) => setReservations(data));
-    setIsLoading(false);
-  });
+  const { data: reservations, isLoading } = useFetch("/api/reservations");
 
   return (
     <>

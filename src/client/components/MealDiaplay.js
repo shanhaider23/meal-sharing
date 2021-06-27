@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useFetch } from "./useMeals";
 import { NavLink } from "react-router-dom";
 function MealDiaplay() {
-  const [meals, setMeal] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    fetch("/api/meals")
-      .then((response) => response.json())
-      .then((data) => setMeal(data));
-    setIsLoading(false);
-  });
+  const { data: meals, isLoading } = useFetch("/api/meals");
 
   return (
     <>

@@ -10,7 +10,6 @@ function ReservationForm() {
 
   function saveData(e) {
     e.preventDefault();
-    alert("Reservation Added");
     let data = {
       number_of_guests,
       meal_id,
@@ -20,6 +19,7 @@ function ReservationForm() {
       name,
     };
     // console.warn(data);
+
     fetch("/api/reservations", {
       method: "POST",
       headers: {

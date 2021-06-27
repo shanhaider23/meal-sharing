@@ -11,7 +11,7 @@ function AddMeals() {
 
   function saveData(e) {
     e.preventDefault();
-    alert("Meal Added");
+
     let data = {
       title,
       discription,
