@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Addmeal.css";
 
 function AddMeals() {
   const [title, setTitle] = useState("");
@@ -38,73 +39,102 @@ function AddMeals() {
     });
   }
   return (
-    <div style={{ color: "red" }}>
-      <h1>Add Meal </h1>
-      <h3>Meal Title</h3>
+    <div className="container form-box">
+      <h1 className="pt-4">Add Meal </h1>
+
       <form>
-        <input
-          type="text"
-          name="title"
-          value={title}
-          required
-          onChange={(e) => {
-            setTitle(e.target.value);
-          }}
-        />
-        <br /> <br />
-        <h3>Meal Description</h3>
-        <input
-          type="text"
-          name="discription"
-          value={discription}
-          required
-          onChange={(e) => {
-            setDiscription(e.target.value);
-          }}
-        />
-        <br /> <br />
-        <h3>Location</h3>
-        <input
-          type="text"
-          name="location"
-          value={location}
-          required
-          onChange={(e) => {
-            setLocation(e.target.value);
-          }}
-        />
-        <br /> <br />
-        <h3>Maximum Reservation</h3>
-        <input
-          type="number"
-          name="email"
-          value={max_reservations}
-          onChange={(e) => {
-            setReservations(e.target.value);
-          }}
-        />
-        <br /> <br />
-        <h3>Price</h3>
-        <input
-          type="number"
-          name="price"
-          value={price}
-          onChange={(e) => {
-            setPrice(e.target.value);
-          }}
-        />
-        <br /> <br />
-        <h3>Created Date</h3>
-        <input
-          type="date"
-          name="date"
-          value={createdDate}
-          onChange={(e) => {
-            setCreatedDate(e.target.value);
-          }}
-        />
-        <br /> <br />
-        <button type="submit" onClick={saveData}>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Meal Title
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            value={title}
+            required
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Meal Description
+          </label>
+          <input
+            type="text"
+            name="discription"
+            class="form-control"
+            id="exampleInputEmail1"
+            value={discription}
+            required
+            onChange={(e) => {
+              setDiscription(e.target.value);
+            }}
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Location
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="location"
+            value={location}
+            required
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Maximum Reservation
+          </label>
+          <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            value={max_reservations}
+            onChange={(e) => {
+              setReservations(e.target.value);
+            }}
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Price
+          </label>
+          <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="price"
+            value={price}
+            onChange={(e) => {
+              setPrice(e.target.value);
+            }}
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Created Date
+          </label>
+          <input
+            type="date"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="date"
+            value={createdDate}
+            onChange={(e) => {
+              setCreatedDate(e.target.value);
+            }}
+          />
+        </div>
+        <button type="submit" class="btn btn-primary" onClick={saveData}>
           Save New Meal
         </button>
       </form>

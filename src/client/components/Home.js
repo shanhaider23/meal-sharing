@@ -1,18 +1,10 @@
 import React from "react";
+import "../styles/Home.css";
 function Home() {
   return (
-    <div>
+    <div className="container-fluid">
       <div className="mealName">
-        <img
-          src="https://image.freepik.com/free-vector/menu-logo-graphic-design_24908-54835.jpg"
-          alt="foodmenu"
-          height="300"
-          width="300"
-        ></img>
-        <p>Welcome to Meal Sharing App</p>
-        <p>
-          Created by <br></br>Shan-e-Haider
-        </p>
+        <h1 className="meal-heading">Welcome to Meal Sharing App</h1>
       </div>
     </div>
   );

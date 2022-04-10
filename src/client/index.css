@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import 'theme.css';
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "theme.css";
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
 #root {
-  padding-left: 30%;
-  padding-right: 30%;
   height: 100vh;
 }
 
 body {
   margin: 0;
   font-size: 17px;
+  background-color: #040404;
 }
 
 ul {

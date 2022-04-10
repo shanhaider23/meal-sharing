@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.css";
+import "../styles/Footer.css";
 import WeatherFetch from "./WeatherFetch";
 const Footer = () => (
   <div className="footer">
-    <h3>
+    <h6>
       Meal Sharing App <br></br> © Project by Shan-e-Haider
-    </h3>
+    </h6>
     <div className="weather">
       <WeatherFetch />
     </div>

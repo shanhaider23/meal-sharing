@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./MainHeader.css";
+import "../styles/MainHeader.css";
 
 const MainHeader = () => {
   const [click, setClick] = useState(false);
@@ -11,12 +11,6 @@ const MainHeader = () => {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <img
-            src="https://image.freepik.com/free-vector/menu-logo-graphic-design_24908-54835.jpg"
-            alt="Logo"
-            height="64"
-            width="100"
-          ></img>
           <NavLink exact to="/" className="nav-logo">
             Meal Sharing App
           </NavLink>

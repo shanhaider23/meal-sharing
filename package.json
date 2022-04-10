@@ -25,6 +25,7 @@
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
+    "bootstrap": "^5.1.3",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
     "css-loader": "^5.0.0",
@@ -54,10 +55,10 @@
     "webpack-cli": "3.3.5"
   },
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
+    "concurrently": "^5.3.0",
     "nodemon": "^1.12.1",
     "sequelize-cli": "^5.4.0",
-    "webpack-dev-server": "^3.11.0",
-    "concurrently": "^5.3.0",
-    "case-sensitive-paths-webpack-plugin": "^2.3.0"
+    "webpack-dev-server": "^3.11.0"
   }
 }
