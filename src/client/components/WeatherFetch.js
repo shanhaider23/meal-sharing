@@ -22,8 +22,8 @@ function WeatherFetch() {
   }, []);
   return (
     <>
-      <h3>Weather Copenhagen : {mainTemp}°C</h3>
-      <h3>Description : {description}</h3>
+      <h6>Weather Copenhagen : {mainTemp}°C</h6>
+      <h6>Description : {description}</h6>
     </>
   );
 }

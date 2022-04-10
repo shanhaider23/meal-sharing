@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <MainHeader />
-      <div>
+      <div className="container-fluid main-box">
         <Switch>
           <Route exact path="/">
             <Redirect to="/home" />
@@ -38,8 +38,8 @@ function App() {
             <TestComponent></TestComponent>
           </Route>
         </Switch>
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 }

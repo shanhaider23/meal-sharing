@@ -35,49 +35,69 @@ function ReservationForm() {
     });
   }
   return (
-    <div style={{ color: "red" }}>
+    <div className="container form-box">
       <h1>Add New Reservation</h1>
-      <h3>Number of Guest</h3>
-      <input
-        type="number"
-        name="name"
-        value={number_of_guests}
-        onChange={(e) => {
-          setNumberOfGuests(e.target.value);
-        }}
-      />
-      <br /> <br />
-      <h3>Email</h3>
-      <input
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
-      <br /> <br />
-      <h3>Phone Number</h3>
-      <input
-        type="number"
-        name="email"
-        value={phone}
-        onChange={(e) => {
-          setPhone(e.target.value);
-        }}
-      />
-      <br /> <br />
-      <h3>Full Name</h3>
-      <input
-        type="text"
-        name="email"
-        value={name}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />
-      <br /> <br />
-      <button type="button" onClick={saveData}>
+      <div class="mt-3">
+        <label for="exampleInputEmail1" class="form-label">
+          Full Name
+        </label>
+        <input
+          type="text"
+          name="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+        />
+      </div>
+      <div class="mt-3">
+        <label for="exampleInputEmail1" class="form-label">
+          Number of Guest
+        </label>
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputEmail1"
+          value={number_of_guests}
+          onChange={(e) => {
+            setNumberOfGuests(e.target.value);
+          }}
+        />
+      </div>
+      <div class="mt-3">
+        <label for="exampleInputEmail1" class="form-label">
+          Email
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          name="email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+      </div>
+      <div class="mt-3 mb-4">
+        <label for="exampleInputEmail1" class="form-label">
+          Phone Number
+        </label>
+        <input
+          type="number"
+          name="number"
+          class="form-control"
+          id="exampleInputEmail1"
+          value={phone}
+          onChange={(e) => {
+            setPhone(e.target.value);
+          }}
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary" onClick={saveData}>
         Save New Reservation
       </button>
     </div>

@@ -1,0 +1,11 @@
+.mealName {
+  width: 30%;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  padding-top: 12rem;
+  padding-left: 3rem;
+}
+.meal-heading {
+  font-size: 3rem;
+}
